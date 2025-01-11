@@ -1,8 +1,9 @@
 const mongoose=require('mongoose');
+require('dotenv').config();
 main().catch(err => console.log(err))
  async function main(){
 
-    mongoose.connect("mongodb+srv://goutamchoudhary:Goutam907688@cluster0.6gf0e.mongodb.net/PaytmProject")
+    mongoose.connect(process.env.MONGO_URL)
     console.log("Connected to db");
     
  }
