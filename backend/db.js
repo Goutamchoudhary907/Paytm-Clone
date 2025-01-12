@@ -1,5 +1,5 @@
 const mongoose=require('mongoose');
-require('dotenv').config();
+require('dotenv').config({ path: './backend/.env' });
 main().catch(err => console.log(err))
  async function main(){
 
