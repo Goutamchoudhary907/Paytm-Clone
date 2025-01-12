@@ -20,7 +20,7 @@ export const SendMoney = () => {
             return;
          }
          try {
-         const response= await axios.post("http://localhost:3000/api/v1/account/transfer" ,{
+         const response= await axios.post("https://paytm-clone-fawn.vercel.app/api/v1/account/transfer" ,{
                 to:id,
                 amount
             } ,{
