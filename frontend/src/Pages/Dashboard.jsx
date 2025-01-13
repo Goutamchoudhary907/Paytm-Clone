@@ -19,7 +19,7 @@ export default function Dashboard(){
               return;
             }
              try {
-                const response=await axios.get("https://paytm-clone-fawn.vercel.app/api/v1/account/balance" ,{
+                const response=await axios.get("http://localhost:3000/api/v1/account/balance" ,{
                     headers:{
                         Authorization:"Bearer "+localStorage.getItem("token")
                     }
@@ -40,7 +40,7 @@ export default function Dashboard(){
     return <div className="min-h-screen bg-gray-100">
         <Appbar onClick={async ()=>{
             try{
-                const response=await axios.get("https://paytm-clone-fawn.vercel.app/api/v1/user/signout" ,{
+                const response=await axios.get("http://localhost:3000/api/v1/user/signout" ,{
                     headers:{
                         Authorization:"Bearer "+localStorage.getItem("token"),
                     },

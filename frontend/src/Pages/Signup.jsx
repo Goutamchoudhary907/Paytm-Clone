@@ -33,7 +33,7 @@ export const Signup= () =>{
       setMessage("Please enter Firstname and Lastname")
     }
     try {
-      const response=await axios.post("https://paytm-clone-fawn.vercel.app/api/v1/user/signup" , {
+      const response=await axios.post("http://localhost:3000/api/v1/user/signup" , {
         username,
         firstName,
         lastName,
