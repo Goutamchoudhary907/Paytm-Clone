@@ -1,9 +1,16 @@
 const mongoose=require('mongoose');
+require('dotenv').config();
 main().catch(err => console.log(err))
  async function main(){
 
-    mongoose.connect("mongodb+srv://goutamchoudhary:Goutam907688@cluster0.6gf0e.mongodb.net/PaytmProject")
-    console.log("Connected to db");
+    const dbURI = process.env.MONGO_URI;
+    mongoose.connect(dbURI)
+  .then(() => {
+    console.log('MongoDB connected successfully');
+  })
+  .catch((err) => {
+    console.error('Error connecting to MongoDB:', err.message);
+  });
     
  }
  const userSchema= new mongoose.Schema({
